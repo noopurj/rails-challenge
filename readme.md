@@ -14,8 +14,10 @@ You will be required to think about how we can collect each meal feedback and de
 Using this project boiler plate, create a meal feedback system that can help capture the above data points.
 
 Scenario:
+
 1. Given user visits the order feedback url, she should be able to give a rating for each order_items
   - Feedback can be in the form of 🌟🌟🌟🌟🌟 or 👎👍 or 🎉🎉🎉  or ❤️❤️❤️ (if you have a better alternative, feel free to implement and tell us why)
+
 1. User should be able to give a rating for the delivery (same as meals ideally so the interaction is consistent)
 1. User should be able to input a comment on each feedback (or you can think beyond free form text and think of quick select tags, make the case)
 1. User should not be able to submit a feedback for the same order again
