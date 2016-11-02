@@ -37,7 +37,7 @@ Use a prototyping tool of your choice (we use Rails here, but for this exercise,
 ## Areas of assessment
 
 1. Code readability
-1. Familiarity with Rails application pattern
+1. Familiarity with Rails application pattern (if applicable)
 1. Unit tests
 1. OK looking user interfaces
 1. Corner cases handling
