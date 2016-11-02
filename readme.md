@@ -3,31 +3,43 @@
 
 Grain is an online food delivery company that manages the whole end-to-end customer experience. We maintain control over every part of the supply chain from the cooking to ordering to delivery to achieve a great customer experience. [https://grain.com.sg]()
 
+## What is the problem?
 
-## What you are building
-Building a fuss-free plug-and-play meal feedback system that help us understand customer preferences and meal popularity.
+We belive that feedbacks are a treasure trove of value, every customers voice is encapsulated in a single response that contains very actionable suggestions and also hidden behaviours we should be deciphering.
+We want to collect all data about each meal and also the delivery service.
 
 
-1. Given user visits the order feedback url, she should be able to give feedback for each order_items
-  - Feedback will be in the form of 🌟🌟🌟🌟🌟 or 👎👍 or 🎉🎉🎉  or ❤️❤️❤️
+## What you need to build!
+You will be required to think about how we can collect each meal feedback and delivery service feedback for every order.
+Using this project boiler plate, create a meal feedback system that can help capture the above data points.
 
-1. When user finishes the meals feedback, she should be able to send a feedback for the delivery
-1. User should be able to input a comment on each feedback
+Scenario:
+1. Given user visits the order feedback url, she should be able to give a rating for each order_items
+  - Feedback can be in the form of 🌟🌟🌟🌟🌟 or 👎👍 or 🎉🎉🎉  or ❤️❤️❤️ (if you have a better alternative, feel free to implement and tell us why)
+1. User should be able to give a rating for the delivery (same as meals ideally so the interaction is consistent)
+1. User should be able to input a comment on each feedback (or you can think beyond free form text and think of quick select tags, make the case)
+1. User should not be able to submit a feedback for the same order again
 
-	
-## Setup
+## Setting it all up
 
 1. Fork this repo
 1. `bundle install`
+1. `rails s`
 1. Visit [http://localhost:3000/order/123/feedback]() to get started
 
+= or =
 
-## Scoring
+Use a prototyping tool of your choice (we use Rails here, but for this exercise, your most comfortable tool is fine)
+
+
+## Areas of assessment
 
 1. Code readability
+1. Familiarity with Rails application pattern
 1. Unit tests
+1. OK looking user interfaces
 1. Corner cases handling
-1. Good looking user interfaces
+
 
 ## Questions?
 
