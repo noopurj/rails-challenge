@@ -71,6 +71,7 @@ GEM
     mime-types-data (3.2016.0521)
     mini_portile2 (2.1.0)
     minitest (5.9.1)
+    nested_form (0.3.2)
     nokogiri (1.6.8.1)
       mini_portile2 (~> 2.1.0)
     pry (0.10.1)
@@ -162,6 +163,7 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails (~> 4.1.0)
   jquery-rails
+  nested_form
   pry
   rails (= 4.2.5.1)
   rspec-rails (~> 3.5)
@@ -173,4 +175,4 @@ DEPENDENCIES
   web-console (~> 2.0)
 
 BUNDLED WITH
-   1.12.5
+   1.13.6

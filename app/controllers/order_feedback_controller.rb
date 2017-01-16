@@ -1,21 +1,29 @@
-# Dummy Model
-Order = Struct.new(:id, :date, :order_items)
-OrderItem = Struct.new(:id, :meal_name)
-
 class OrderFeedbackController < ApplicationController
-  def new
-    @order = find_order(params[:id])
+  before_action :set_order
+
+  def update
+    if @order.update order_params
+      render :thank_you
+    else
+      render :edit
+    end
+  end
+
+  def edit
+    if @order.rated?
+      render :thank_you
+    end
+  end
+
+  def thank_you
   end
 
   private
-  def find_order(order_id)
-    # Will return an Order Model or nil
-    # feel free to implement this with ActiveRecord if this is insufficient
+  def set_order
+    @order = Order.find(params[:id])
+  end
 
-    Order.new(
-      "GO#{order_id}",
-      Date.new(2016, 4, 10),
-      [ OrderItem.new(101, "Samsui Chicken Rice"), OrderItem.new(121, "Grilled Farm Fresh Chicken") ]
-    )
+  def order_params
+    params.require(:order).permit(:id, :delivery_rating, :delivery_feedback, order_items_attributes:[:id, :rating, :feedback])
   end
 end

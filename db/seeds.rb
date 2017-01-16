@@ -5,3 +5,21 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+order1 = Order.create({
+    :date => Time.now.to_datetime
+                     })
+order1.order_items.create({
+                             :meal_name => 'Samsui Chicken Rice'
+                         })
+order1.order_items.create({
+                             :meal_name => 'Farm Fresh Grilled Chicken'
+                         })
+order2 = Order.create({
+                          :date => Time.now.to_datetime
+                      })
+order2.order_items.create({
+                              :meal_name => 'Sambal Pasta'
+                          })
+order2.order_items.create({
+                              :meal_name => 'Miso Cream Pasta'
+                          })

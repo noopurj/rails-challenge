@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>
+    Thank you for you feedback for Order <%= @order.id %>
+  </h1>
+  <p>
+    Delivery Rating: <%= @order.delivery_rating %> <br>
+    Delivery Comments: <%= @order.delivery_feedback %>
+  </p>
+  <% @order.order_items.each do |order_item| %>
+      <h4><%= order_item.meal_name %></h4>
+      Rating: <%= order_item.rating %> <br>
+      Comments: <%= order_item.feedback %> <br>
+  <%end%>
+</div>

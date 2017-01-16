@@ -1,0 +1,25 @@
+<%= nested_form_for @order, :url => 'feedback/new' do |f| %>
+
+    <%= f.label :delivery_rating, "Please rate your order's delivery" %>
+    <%= f.number_field :delivery_rating, :class => 'rating rating-xs', 'data-step' =>'1', 'data-show-caption' => 'false', 'data-size' => 'xs'%>
+
+    <div class="field">
+      <%= f.label :delivery_feedback, 'Any thoughts on the delivery service: ' %> <br>
+      <%= f.text_area :delivery_feedback %>
+    </div>
+
+    <h3>Rate Order Items:</h3>
+
+    <%= f.fields_for :order_items do |item_form| %>
+        <h4><%= item_form.object.meal_name %></h4>
+        <%= item_form.label :rating, 'Please rate this item' %>
+        <%= item_form.number_field :rating, :class => 'rating rating-xs', 'data-step' =>'1', 'data-show-caption' => 'false', 'data-size' => 'xs' %>
+
+        <div class="field">
+          <%= item_form.label :feedback, 'How can we make it better? ' %> <br>
+          <%= item_form.text_area :feedback%>
+        </div>
+
+    <% end -%>
+    <%= submit_tag "Submit", :class => 'btn btn-default' %>
+<%end -%>

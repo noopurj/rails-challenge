@@ -12,4 +12,13 @@
  *
  *= require_tree .
  *= require_self
+ *= require star-rating
  */
+.container{
+    background-color: #FDF3E7;
+    width:50%;
+    padding: 25px;
+    margin-left:auto;
+    margin-right: auto;
+}
+
